@@ -24,7 +24,11 @@
   .statusbar { margin-top: 6px; border: 1px inset #fff; padding: 2px 4px; background: #d4d0c8; min-height: 14px; }
   .error { color: #c00000; font-weight: bold; }
 </style>
-<script src="rules.js"></script>
+<script>
+  // Cache-busting: after a Blind Challenge rule change, always load the latest rules.js
+  // (GitHub Pages serves it with max-age=600).
+  document.write('<script src="rules.js?v=' + Date.now() + '"><\/script>');
+</script>
 </head>
 <body>
 <div class="titlebar">GESCOM v3.2 - [Saisie devis client]</div>
